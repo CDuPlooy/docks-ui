@@ -5,7 +5,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-
 import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
@@ -20,11 +19,18 @@ import { HomeModule} from './_shared/home/home.module';
 import { AuthService } from '_services/auth/auth.service';
 import { RefreshComponent } from './refresh/refresh.component';
 
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { DatatableComponent } from './_shared/services/datatable/datatable.component';
+import { StackComponent } from './_shared/stack/stack.component';
+
+
 @NgModule({
     declarations: [
         PageNotFoundComponent,
         LoginComponent,
         RefreshComponent,
+        DatatableComponent,
+        StackComponent,
     ],
     imports: [
         BrowserModule,
@@ -33,6 +39,7 @@ import { RefreshComponent } from './refresh/refresh.component';
         HomeModule,
         AppRoutingModule,
         AngularFontAwesomeModule,
+        NgxDatatableModule,
     ],
     providers: [
         {

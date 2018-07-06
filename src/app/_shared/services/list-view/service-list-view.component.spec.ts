@@ -5,10 +5,17 @@ import {HttpClientModule} from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TokenStorage } from '../../../_classes';
 
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { ServiceListViewComponent } from '../list-view/service-list-view.component';
+
 describe('ServicesListViewComponent', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [HttpClientModule, RouterTestingModule],
+            imports: [
+                NgbModule.forRoot(), HttpClientModule, RouterTestingModule, NgxDatatableModule
+            ],
             providers: [ConfigurationService, ServicesService, MockService, TokenStorage],
         });
     });

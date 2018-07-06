@@ -28,11 +28,14 @@ import { FormsModule } from '@angular/forms';
 import { AuthGuard } from '_guards/auth.guard';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
 @NgModule({
   imports: [
     CommonModule,
     HomeRoutingModule,
     FormsModule,
+    NgxDatatableModule,
     NgbModule,
   ],
   declarations: [
