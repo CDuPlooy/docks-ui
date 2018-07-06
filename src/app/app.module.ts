@@ -20,8 +20,6 @@ import { AuthService } from '_services/auth/auth.service';
 import { RefreshComponent } from './refresh/refresh.component';
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { DatatableComponent } from './_shared/services/datatable/datatable.component';
-import { StackComponent } from './_shared/stack/stack.component';
 
 
 @NgModule({
@@ -29,8 +27,6 @@ import { StackComponent } from './_shared/stack/stack.component';
         PageNotFoundComponent,
         LoginComponent,
         RefreshComponent,
-        DatatableComponent,
-        StackComponent,
     ],
     imports: [
         BrowserModule,
