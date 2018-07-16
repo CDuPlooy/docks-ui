@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { TokenStorage } from '../../_classes';
 
-const docksApiAddressKey = 'docksApiAddress';
+const docksApiAddressKey = 'localhost:8080';
 
 @Injectable()
 export class ConfigurationService {
