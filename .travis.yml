@@ -5,6 +5,8 @@ dist: trusty
 sudo: required
 services:
      - docker
+env:
+     - DOCKS_API_ADDRESS=127.0.0.1:8080
 addons:
     chrome: stable
 cache:
