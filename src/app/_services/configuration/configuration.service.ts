@@ -23,12 +23,7 @@ export class ConfigurationService {
    * Return the Docks Address stored in memory
    */
   public getAPIHostname(): string {
-    if (this.apiHostname === null) {
-      console.error(
-        'Docks API Address has not been set yet. The request will fail.'
-      );
-    }
-
+    this.apiHostname = 'localhost:8080';
     return this.apiHostname;
   }
 
