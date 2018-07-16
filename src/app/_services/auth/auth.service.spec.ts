@@ -25,9 +25,9 @@ describe('AuthService', () => {
   }));
 
     it('it should authenticate', inject([AuthService, ConfigurationService], (service: AuthService, config: ConfigurationService) => {
-        service.getToken('admin', 'admin').subscribe(authError => {
+        service.getToken('admin', 'aaaadmin').subscribe(authError => {
           let got_response = false;
-          if(authError === AuthError.AUTH_OK) {
+          if(authError === AuthError.AUTH_ERR_CREDENTIALS) {
             got_response = true;
           }
           expect(got_response).toEqual(true);
