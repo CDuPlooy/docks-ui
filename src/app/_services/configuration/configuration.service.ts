@@ -3,11 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { TokenStorage } from '../../_classes';
 
-const docksApiAddressKey = 'localhost:8080';
+const docksApiAddressKey = 'docksApiAddress';
 
 @Injectable()
 export class ConfigurationService {
-  private apiHostname: string = 'localhost:8080';
+  private apiHostname: string = null;
 
   constructor(
     private http: HttpClient,
@@ -23,7 +23,12 @@ export class ConfigurationService {
    * Return the Docks Address stored in memory
    */
   public getAPIHostname(): string {
-    this.apiHostname = 'localhost:8080';
+    if (this.apiHostname === null) {
+      console.error(
+        'Docks API Address has not been set yet. The request will fail.'
+      );
+    }
+
     return this.apiHostname;
   }
 
