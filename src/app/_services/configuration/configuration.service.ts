@@ -7,7 +7,7 @@ const docksApiAddressKey = 'localhost:8080';
 
 @Injectable()
 export class ConfigurationService {
-  private apiHostname: string = null;
+  private apiHostname: string = 'localhost:8080';
 
   constructor(
     private http: HttpClient,
