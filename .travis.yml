@@ -12,7 +12,7 @@ cache:
     directories:
         - node_modules
 before_script:
-     - bash ./write-api-address.sh
+     - /bin/bash ./write-api-address.sh
      - docker swarm init
      - docker stack deploy -c docker-compose-api.yml docks-api
      - npm install -g --silent @angular/cli
